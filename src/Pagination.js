@@ -58,12 +58,21 @@ export default class Pagination extends Component {
         btnEvent = this.onChangePage.bind(this, i);
       }
       buttons.push(
-        <li key={i} className={isCurrent ? 'active' : null}>
-          <a role="button" href="#" onClick={btnEvent} tabIndex="0">
-            <span>
-              {i + 1}
-            </span>
-            {isCurrent ? <span className="sr-only">(current)</span> : null}
+        <li
+          key={i}
+          className={
+            isCurrent ? 'pagination-link is-current' : 'pagination-link'
+          }
+        >
+          <a
+            style={{ color: isCurrent ? '#fff' : null }}
+            role="button"
+            href="#"
+            onClick={btnEvent}
+            tabIndex="0"
+          >
+            <span>{i + 1}</span>
+            {isCurrent ? <span className="sr-only" /> : null}
           </a>
         </li>,
       );
@@ -88,7 +97,12 @@ export default class Pagination extends Component {
     }
 
     buttons = [
-      <li key="first" className={!isNotFirst ? 'disabled' : null}>
+      <li
+        key="first"
+        className={
+          !isNotFirst ? 'pagination-link is-disabled' : 'pagination-link'
+        }
+      >
         <a
           role="button"
           href="#"
@@ -100,7 +114,12 @@ export default class Pagination extends Component {
           <span className="fa fa-angle-double-left" aria-hidden="true" />
         </a>
       </li>,
-      <li key="prev" className={!isNotFirst ? 'disabled' : null}>
+      <li
+        key="prev"
+        className={
+          !isNotFirst ? 'pagination-link is-disabled' : 'pagination-link'
+        }
+      >
         <a
           role="button"
           href="#"
@@ -115,7 +134,12 @@ export default class Pagination extends Component {
     ].concat(buttons);
 
     buttons = buttons.concat([
-      <li key="next" className={!isNotLast ? 'disabled' : null}>
+      <li
+        key="next"
+        className={
+          !isNotLast ? 'pagination-link is-disabled' : 'pagination-link'
+        }
+      >
         <a
           role="button"
           href="#"
@@ -127,7 +151,12 @@ export default class Pagination extends Component {
           <span className="fa fa-angle-right" aria-hidden="true" />
         </a>
       </li>,
-      <li key="last" className={!isNotLast ? 'disabled' : null}>
+      <li
+        key="last"
+        className={
+          !isNotLast ? 'pagination-link is-disabled' : 'pagination-link'
+        }
+      >
         <a
           role="button"
           href="#"
@@ -142,9 +171,13 @@ export default class Pagination extends Component {
     ]);
 
     return (
-      <ul className={this.props.className} aria-label="Pagination">
-        {buttons}
-      </ul>
+      <nav
+        className={this.props.className}
+        aria-label="pagination"
+        role="navigation"
+      >
+        <ul className="pagination-list">{buttons}</ul>
+      </nav>
     );
   }
 }
