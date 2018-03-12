@@ -1,4 +1,4 @@
-# react-data-components
+# react-data-components-bulma
 
 [![Build Status](https://travis-ci.org/carlosrocha/react-data-components.svg?branch=master)](https://travis-ci.org/carlosrocha/react-data-components)
 
