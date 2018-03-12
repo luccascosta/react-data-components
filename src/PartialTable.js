@@ -13,6 +13,7 @@ export default class PartialTable extends Component {
       columns,
       keys,
       buildRowOptions,
+      language,
     } = this.props;
 
     // Protect against unloaded data.
@@ -30,11 +31,13 @@ export default class PartialTable extends Component {
     } = this.props.data;
 
     return (
-      <div className="container">
+      <div>
         <div className="columns">
           <div className="column is-4">
             <div>
-              <label htmlFor="page-menu">Page size:</label>
+              <label htmlFor="page-menu">
+                {language === 'pt-BR' ? 'Itens: ' : 'Page size: '}
+              </label>
               <select
                 id="page-menu"
                 value={pageSize}
@@ -49,7 +52,9 @@ export default class PartialTable extends Component {
               </select>
             </div>
             <div>
-              <label htmlFor="search-field">Search:</label>
+              <label htmlFor="search-field">
+                {language === 'pt-BR' ? 'Pesquisar: ' : 'Search: '}
+              </label>
               <input
                 id="search-field"
                 type="search"
@@ -76,6 +81,7 @@ export default class PartialTable extends Component {
           buildRowOptions={buildRowOptions}
           sortBy={sortBy}
           onSort={onSort}
+          language={language}
         />
       </div>
     );

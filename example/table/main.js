@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import { DataTable } from 'react-data-components';
 
 function buildTable(data) {
-  const renderMapUrl =
-    (val, row) =>
-      <a href={`https://www.google.com/maps?q=${row['lat']},${row['long']}`}>
-        Google Maps
-      </a>;
+  const renderMapUrl = (val, row) => (
+    <a href={`https://www.google.com/maps?q=${row['lat']},${row['long']}`}>
+      Google Maps
+    </a>
+  );
 
   const tableColumns = [
     { title: 'Name', prop: 'name' },
@@ -25,13 +25,14 @@ function buildTable(data) {
       initialData={data}
       initialPageLength={5}
       initialSortBy={{ prop: 'city', order: 'descending' }}
-      pageLengthOptions={[ 5, 20, 50 ]}
+      pageLengthOptions={[5, 20, 50]}
+      language="pt-BR"
     />
   );
 }
 
 fetch('/data.json')
   .then(res => res.json())
-  .then((rows) => {
+  .then(rows => {
     ReactDOM.render(buildTable(rows), document.getElementById('root'));
   });

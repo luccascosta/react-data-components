@@ -93,6 +93,7 @@ export default class Table extends Component {
       sortBy,
       onSort,
       dataArray,
+      language,
       ...otherProps
     } = this.props;
 
@@ -113,12 +114,10 @@ export default class Table extends Component {
           scope="col"
           {...sortProps}
         >
-          <span>
-            {col.title}
-          </span>
-          {!order
-            ? null
-            : <span className={`sort-icon sort-${order}`} aria-hidden="true" />}
+          <span>{col.title}</span>
+          {!order ? null : (
+            <span className={`sort-icon sort-${order}`} aria-hidden="true" />
+          )}
         </th>
       );
     });
@@ -129,35 +128,35 @@ export default class Table extends Component {
 
       return (
         <tr key={getKeys(row)} {...trProps}>
-          {columns.map((col, i) =>
+          {columns.map((col, i) => (
             <td key={i} className={getCellClass(col, row)}>
               {getCellValue(col, row)}
-            </td>,
-          )}
+            </td>
+          ))}
         </tr>
       );
     });
 
     return (
       <table {...otherProps}>
-        {!sortBy
-          ? null
-          : <caption className="sr-only" role="alert" aria-live="polite">
-              {`Sorted by ${sortBy.prop}: ${sortBy.order} order`}
-            </caption>}
+        {!sortBy ? null : (
+          <caption className="sr-only" role="alert" aria-live="polite">
+            {`Sorted by ${sortBy.prop}: ${sortBy.order} order`}
+          </caption>
+        )}
         <thead>
-          <tr>
-            {headers}
-          </tr>
+          <tr>{headers}</tr>
         </thead>
         <tbody>
-          {rows.length
-            ? rows
-            : <tr>
-                <td colSpan={columns.length} className="text-center">
-                  No data
-                </td>
-              </tr>}
+          {rows.length ? (
+            rows
+          ) : (
+            <tr>
+              <td colSpan={columns.length} className="text-center">
+                No data
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
     );
