@@ -1,12 +1,13 @@
 {
-  "name": "react-data-components",
+  "name": "react-data-components-bulma",
   "version": "1.2.1",
-  "description": "React data components",
+  "description": "React data components with bulma support",
   "keywords": [
     "pagination",
     "react",
     "react-component",
-    "table"
+    "table",
+    "bulma"
   ],
   "author": "Carlos Rocha",
   "contributors": [
@@ -25,7 +26,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/carlosrocha/react-data-components"
+    "url": "https://github.com/luccascosta/react-data-components-bulma"
   },
   "dependencies": {
     "lodash": "^4.13.1",
