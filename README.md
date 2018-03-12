@@ -12,7 +12,7 @@ SelectableTable: [Live demo and source](https://jsfiddle.net/carlosrocha/p9pouh1
 npm install react-data-components-bulma --save
 ```
 
-This component requires Bulma stylesheet and Font Awesome fonts, in addition
+This component requires [Bulma](https://bulma.io/) stylesheet and Font Awesome fonts, in addition
 to the [stylesheet for headers](css/table-twbs.css). If you are using Webpack
 and the `css-loader` you can also require the css
 with `require('react-data-components/css/table-twbs.css')`.
