@@ -2,17 +2,17 @@
 
 [![Build Status](https://travis-ci.org/carlosrocha/react-data-components.svg?branch=master)](https://travis-ci.org/carlosrocha/react-data-components)
 
-DataTable: [Live demo and source](https://jsfiddle.net/carlosrocha/xgde4uh0/)
+DataTable: [Live demo and source](https://jsfiddle.net/lbclucascosta/qa4guxhv/2/)
 
 SelectableTable: [Live demo and source](https://jsfiddle.net/carlosrocha/p9pouh1v/)
 
 ## Getting started
 
 ```sh
-npm install react-data-components --save
+npm install react-data-components-bulma --save
 ```
 
-This component requires Bootstrap stylesheet and Font Awesome fonts, in addition
+This component requires Bulma stylesheet and Font Awesome fonts, in addition
 to the [stylesheet for headers](css/table-twbs.css). If you are using Webpack
 and the `css-loader` you can also require the css
 with `require('react-data-components/css/table-twbs.css')`.

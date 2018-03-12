@@ -33,7 +33,7 @@ export default class PartialTable extends Component {
     return (
       <div>
         <div className="columns">
-          <div className="column is-4">
+          <div className="column is-3">
             <div>
               <label htmlFor="page-menu">
                 {language === 'pt-BR' ? 'Itens: ' : 'Page size: '}
@@ -52,19 +52,18 @@ export default class PartialTable extends Component {
               </select>
             </div>
             <div>
-              <label htmlFor="search-field">
-                {language === 'pt-BR' ? 'Pesquisar: ' : 'Search: '}
-              </label>
               <input
                 id="search-field"
                 type="search"
                 value={filterValues.globalSearch}
-                className="input"
+                className="input is-small"
+                placeholder={language === 'pt-BR' ? 'Pesquisar' : 'Search'}
+                style={{ marginTop: '5px' }}
                 onChange={onFilter.bind(null, 'globalSearch')}
               />
             </div>
           </div>
-          <div className="column is-8">
+          <div className="column is-9">
             <Pagination
               className="pagination is-rounded is-pulled-right is-small"
               currentPage={pageNumber}
