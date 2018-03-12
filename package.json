@@ -1,6 +1,6 @@
 {
   "name": "react-data-components",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "React data components",
   "keywords": [
     "pagination",
@@ -9,10 +9,12 @@
     "table"
   ],
   "author": "Carlos Rocha",
-  "contributors": [{
-    "name": "Lucas Costa",
-    "email": "lbc.lucascosta@gmail.com"
-  }],
+  "contributors": [
+    {
+      "name": "Lucas Costa",
+      "email": "lbc.lucascosta@gmail.com"
+    }
+  ],
   "license": "MIT",
   "main": "./lib/index",
   "files": [
