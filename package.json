@@ -9,6 +9,10 @@
     "table"
   ],
   "author": "Carlos Rocha",
+  "contributors": [{
+    "name": "Lucas Costa",
+    "email": "lbc.lucascosta@gmail.com"
+  }],
   "license": "MIT",
   "main": "./lib/index",
   "files": [
