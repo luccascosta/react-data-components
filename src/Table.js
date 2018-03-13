@@ -94,6 +94,7 @@ export default class Table extends Component {
       onSort,
       dataArray,
       language,
+      onRowClick,
       ...otherProps
     } = this.props;
 
@@ -127,7 +128,11 @@ export default class Table extends Component {
       const trProps = buildRowOptions ? buildRowOptions(row) : {};
 
       return (
-        <tr key={getKeys(row)} {...trProps}>
+        <tr
+          key={getKeys(row)}
+          {...trProps}
+          onClick={() => (onRowClick ? onRowClick(row) : null)}
+        >
           {columns.map((col, i) => (
             <td key={i} className={getCellClass(col, row)}>
               {getCellValue(col, row)}

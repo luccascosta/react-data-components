@@ -14,6 +14,7 @@ export default class PartialTable extends Component {
       keys,
       buildRowOptions,
       language,
+      onRowClick,
     } = this.props;
 
     // Protect against unloaded data.
@@ -81,6 +82,7 @@ export default class PartialTable extends Component {
           sortBy={sortBy}
           onSort={onSort}
           language={language}
+          onRowClick={onRowClick}
         />
       </div>
     );

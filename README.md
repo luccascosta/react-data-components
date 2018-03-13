@@ -51,5 +51,26 @@ ReactDOM.render((
   ), document.getElementById('root'));
 ```
 
-See [complete example](example/table/main.js).
+### Enable row click and support to portuguese language
+To convert the language to Portuguese (Brasil) it's possible indicating with `language` prop. Also, it's possible to enable click event on each row and associate to a callback.
 
+```
+onRowClick(row){
+    console.log('Row clicked: ', row)
+}
+
+ReactDOM.render((
+    <DataTable
+      keys="name"
+      columns={columns}
+      initialData={data}
+      initialPageLength={5}
+      language='pt-BR'
+      onRowClick={this.onRowClick}
+      initialSortBy={{ prop: 'city', order: 'descending' }}
+    />
+  ), document.getElementById('root'));
+```
+
+
+See [complete example](example/table/main.js).

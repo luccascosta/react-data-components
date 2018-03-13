@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js install
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js build
 
 PATH: 
   /Users/lucascosta/.rvm/gems/ruby-2.4.1/bin:/Users/lucascosta/.rvm/gems/ruby-2.4.1@global/bin:/Users/lucascosta/.rvm/rubies/ruby-2.4.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/lucascosta/.rvm/gems/ruby-2.4.1/bin:/Users/lucascosta/.rvm/gems/ruby-2.4.1@global/bin:/Users/lucascosta/.rvm/rubies/ruby-2.4.1/bin:/Users/lucascosta/.rvm/bin:/Users/lucascosta/.rvm/bin
@@ -8,23 +8,30 @@ Yarn version:
   1.5.1
 
 Node version: 
-  8.9.1
+  8.10.0
 
 Platform: 
   darwin x64
 
 npm manifest: 
   {
-    "name": "react-data-components",
-    "version": "1.2.0",
-    "description": "React data components",
+    "name": "react-data-components-bulma",
+    "version": "1.2.1",
+    "description": "React data components with bulma support",
     "keywords": [
       "pagination",
       "react",
       "react-component",
-      "table"
+      "table",
+      "bulma"
     ],
     "author": "Carlos Rocha",
+    "contributors": [
+      {
+        "name": "Lucas Costa",
+        "email": "lbc.lucascosta@gmail.com"
+      }
+    ],
     "license": "MIT",
     "main": "./lib/index",
     "files": [
@@ -35,7 +42,7 @@ npm manifest:
     ],
     "repository": {
       "type": "git",
-      "url": "https://github.com/carlosrocha/react-data-components"
+      "url": "https://github.com/luccascosta/react-data-components-bulma"
     },
     "dependencies": {
       "lodash": "^4.13.1",
@@ -5198,9 +5205,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit code: 2
   Command: sh
-  Arguments: -c npm run clean && npm run build
+  Arguments: -c webpack && babel src -d lib
   Directory: /Users/lucascosta/Documents/applications/contributors/react-data-components
   Output:
   
